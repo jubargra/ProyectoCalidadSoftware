@@ -1,2 +1,2 @@
 # ProyectoCalidadSoftware
-Proyecto del curso Calidad el Software. 2do cuatrimestre 2022.
+Proyecto del curso Calidad del Software. 2do cuatrimestre 2022.
