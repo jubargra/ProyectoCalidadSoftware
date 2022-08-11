@@ -1,0 +1,169 @@
+package proyecto_calidadsoftware;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Proyecto_CalidadSoftware {
+    public static void main(String[] args) throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver",
+                "C:\\Users\\Golcher\\Documents\\chromedriver\\chromedriver.exe");
+        //Entra a SoundCloud
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        /**
+         * *****************************Requisito*1*************************************
+        */
+        driver.get("https://soundcloud.com/discover");
+        //Acepta cookies
+        Thread.sleep(1000);
+        WebElement cookies = driver.findElement(By.xpath("//*[@id=\"onetrust-accept-btn-handler\"]"));
+        cookies.click();
+        Thread.sleep(1000);
+        //Click Crear Cuenta
+        WebElement crearCuenta = driver.findElement(By.xpath("//*[@id=\"app\"]/header/div/div[3]/div[1]/button[2]"));
+        crearCuenta.click();
+        //Escribir correo
+        WebElement typeMail = driver.findElement(By.xpath("//*[@id=\"sign_in_up_email\"]"));
+        typeMail.click();
+        typeMail.sendKeys("correo@gmail.com");
+        //Escribir pass
+        WebElement pass = driver.findElement(By.xpath("//*[@id=\"enter_password_field\"]"));
+        pass.click();
+        pass.sendKeys("pass");
+        pass.submit();
+        Thread.sleep(5000);
+        /**
+         * *****************************Requisito* 2*************************************
+         */
+        driver.get("https://soundcloud.com/discover");
+        //Acepta cookies
+        WebElement cookies2 = driver.findElement(By.xpath("//*[@id=\"onetrust-accept-btn-handler\"]"));
+        cookies2.click();
+        Thread.sleep(1000);
+        //Click Iniciar Sesion
+        WebElement iniSec = driver.findElement(By.xpath("//*[@id=\"app\"]/header/div/div[3]/div[1]/button[1]"));
+        iniSec.click();
+        //Escribir correo
+        WebElement typeMail2 = driver.findElement(By.xpath("//*[@id=\"sign_in_up_email\"]"));
+        typeMail2.click();
+        typeMail2.sendKeys("correo@gmail.com");
+        //Escribir pass 
+        WebElement pass2 = driver.findElement(By.xpath("//*[@id=\"enter_password_field\"]"));
+        pass2.click();
+        pass2.sendKeys("pass");
+        pass2.submit();
+        Thread.sleep(5000);
+        /**
+         * *****************************Requisito* 3*************************************
+         */
+        driver.get("https://soundcloud.com/zedd");
+        //Acepta cookies
+        WebElement cookies3 = driver.findElement(By.xpath("//*[@id=\"onetrust-accept-btn-handler\"]"));
+        cookies3.click();
+        Thread.sleep(1000);
+        //Seguir Artista
+        WebElement seguir = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[3]/div/div[2]/div/button[1]"));
+        seguir.click();
+        Thread.sleep(5000);
+        /**
+         * *****************************Requisito* 4*************************************
+         */
+        driver.get("https://soundcloud.com/zedd/tracks");
+        //Acepta cookies
+        WebElement cookies4 = driver.findElement(By.xpath("//*[@id=\"onetrust-accept-btn-handler\"]"));
+        cookies4.click();
+        Thread.sleep(1000);
+        //Cambiar Pistas
+        WebElement cambiarPista = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[4]/div[1]/div/div[2]/div/ul/li[1]/div/div/div[2]/div[4]/div[1]/div/div/button[5]"));
+        cambiarPista.click();
+        Thread.sleep(5000);
+        // AQUI NO SE PUEDE CONTINUAR SIN INICIO DE SESION!!! //
+        /**
+         * *****************************Requisito* 5*************************************
+         */
+        driver.get("https://soundcloud.com/aden2034/zedd-and-katy-perry-365-jonas-aden-remix?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing");
+        //Acepta cookies
+        WebElement cookies5 = driver.findElement(By.xpath("//*[@id=\"onetrust-accept-btn-handler\"]"));
+        cookies5.click();
+        Thread.sleep(2000);
+        //Reproducir Pista
+        WebElement reproPista = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div[2]/div/div[2]/div[2]/div/div/div[1]/a"));
+        reproPista.click();
+        Thread.sleep(5000);
+        //Controlar Audio
+        WebElement controlAudio = driver.findElement(By.xpath("/html/body/div[1]/div[4]/section/div/div[3]/button[2]"));
+        controlAudio.click();
+        Thread.sleep(5000);
+        //Siguiente Pista
+        WebElement next = driver.findElement(By.xpath("/html/body/div[1]/div[4]/section/div/div[3]/button[3]"));
+        next.click();
+        Thread.sleep(5000);
+        /**
+         * *****************************Requisito* 6*************************************
+         */
+        driver.get("https://soundcloud.com/you/insights/overview");
+        //Acepta cookies
+        WebElement cookies6 = driver.findElement(By.xpath("//*[@id=\"onetrust-accept-btn-handler\"]"));
+        cookies6.click();
+        Thread.sleep(5000);
+        // AQUI NO SE PUEDE CONTINUAR SIN INICIO DE SESION!!! //
+        /**
+         * *****************************Requisito* 7*************************************
+         */
+        driver.get("https://soundcloud.com/aden2034/zedd-and-katy-perry-365-jonas-aden-remix?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing");
+        //Acepta cookies
+        WebElement cookies7 = driver.findElement(By.xpath("//*[@id=\"onetrust-accept-btn-handler\"]"));
+        cookies7.click();
+        Thread.sleep(2000);
+        //Reproducir Pista
+        WebElement reproPista2 = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div[2]/div/div[2]/div[2]/div/div/div[1]/a"));
+        reproPista2.click();
+        //Pausar Canción
+        WebElement mute = driver.findElement(By.xpath("/html/body/div[1]/div[4]/section/div/div[3]/div[5]/div/div[2]/button"));
+        mute.click();
+        Thread.sleep(5000);
+        /**
+         * *****************************Requisito* 8*************************************
+         */
+        driver.get("https://soundcloud.com/discovery");
+        //Acepta cookies
+        WebElement cookies8 = driver.findElement(By.xpath("//*[@id=\"onetrust-accept-btn-handler\"]"));
+        cookies8.click();
+        //Busqueda de canción
+        WebElement busquedaCancion = driver.findElement(By.xpath("/html/body/div[1]/header/div/div[2]/div/form/input"));
+        busquedaCancion.click();
+        busquedaCancion.sendKeys("I don't speak french");
+        //Filtrar por tracks
+        WebElement filtroTrack = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/div/div[1]/div/ul/li[2]/a"));
+        filtroTrack.click();
+        /**
+         * *****************************Requisito* 9*************************************
+         */
+        driver.get("https://soundcloud.com/you/tracks");
+        //Acepta cookies
+        WebElement cookies9 = driver.findElement(By.xpath("//*[@id=\"onetrust-accept-btn-handler\"]"));
+        cookies9.click();
+        // AQUI NO SE PUEDE CONTINUAR SIN INICIO DE SESION!!! //
+        //Click Ociones Canción
+        WebElement opcCancion = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[3]/div/div[3]/div/div/ul/li[1]/div/div[2]/div[2]/div[1]/div/div[1]/button[2]"));
+        opcCancion.click();
+        Thread.sleep(2000);
+        //Compartir
+        WebElement compartirBoton = driver.findElement(By.xpath("//*[@id=\"dropdown-button-9593\"]/div/div/button[1]"));
+        compartirBoton.click();
+        Thread.sleep(2000);
+        /**
+         * *****************************Requisito* 10*************************************
+         */
+        driver.get("https://soundcloud.com/you/tracks");
+        //Acepta cookies
+        WebElement cookies10 = driver.findElement(By.xpath("//*[@id=\"onetrust-accept-btn-handler\"]"));
+        cookies10.click();
+        // AQUI NO SE PUEDE CONTINUAR SIN INICIO DE SESION!!! //
+        //Seleccionar Editar Ajustes de la canción
+        WebElement selecCancion = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[3]/div/div[3]/div/div/ul/li[1]/div/div[2]/div[2]/div[1]/div/div[2]/button[1]"));
+        selecCancion.click();
+        Thread.sleep(5000);
+    }
+}
